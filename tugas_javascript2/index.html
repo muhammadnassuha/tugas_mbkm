@@ -1,0 +1,34 @@
+<script>
+    var pegawai = "Muhammad Nasuha";
+    var jabatan = "manager";
+    var status = "menikah"
+    var ttl_gaji = "";
+    var tunjangan_kel = "";
+
+    if(jabatan ==  'manager'){
+        ttl_gaji = 10000000;
+    }else if(jabatan == "staf manager"){
+        ttl_gaji = 5000000;
+    }else if(jabatan == 'asisten manager'){
+        ttl_gaji = 8000000;
+    }else{
+        ttl_gaji = 100000;
+    }
+
+    let tunjangan = 0.1 * ttl_gaji;
+    let bpjs = 0.1 * ttl_gaji;
+    if(status == 'menikah') tunjangan_kel = 0.1 * ttl_gaji;
+    else tunjangan_kel = 0;
+
+    let total_pendapatan = ttl_gaji + tunjangan + bpjs + tunjangan_kel;
+
+    document.write(" Data Pegawai <hr/>" +
+   "Nama Pegawai :" + pegawai +
+   "<br/> Jabatan :" + jabatan +
+   "<br/> Status :" + status +
+   "<br/> BPJS :" + bpjs +
+   "<br/> Tunjangan Jabatan :" + tunjangan +
+   "<br/> tunjangan Keluarga :" + tunjangan_kel +
+   "<br/> Jumlah Gaji :" + total_pendapatan
+   );
+</script>
