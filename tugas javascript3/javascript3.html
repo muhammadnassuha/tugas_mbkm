@@ -1,0 +1,66 @@
+<script>
+    //    array of Object
+    //    atau array didalam array 
+    //    array yang menyimpan array
+        let p1 = {nama : "nasuha", nilai:100};
+        let p2 = {nama : "budi", nilai:20};
+        let p3 = {nama : "budiman", nilai:90};
+        let p4 = {nama : "budijaya", nilai:30};
+        let p5 = {nama : "budiah", nilai:0};
+        
+        let person = [p1,p2,p3,p4,p5];
+    </script>
+    <h3>
+        <table style="padding: 10; text-align: center; width: 100%; ">
+            <thead style="background-color: rgb(74, 99, 198);">
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Nilai</th>
+                    <th>Grade</th>
+                    <th>Peringkat</th>
+                    <th>Keterangan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <script>
+                    var no = 1;
+                    for (p of person){
+                        let ket = (p.nilai >=60)? "lulus" : "Gagal";
+                        
+                        // if multi fungsi
+                        if(p.nilai > 85 && p.nilai <= 100) grade = "A";
+                        else if (p.nilai > 75 && p.nilai <= 85) grade = "B";
+                        else if (p.nilai > 60 && p.nilai <= 75) grade = "C";
+                        else if (p.nilai > 30 && p.nilai <= 60) grade = "D";
+                        else if (p.nilai > 0 && p.nilai <= 30) grade = "E";
+                        else grade = "";
+                        
+                        // switch grade
+                        switch(grade){
+                            case "A": peringkat = "memuaskan"; break;
+                            case "B": peringkat = "baik"; break;
+                            case "C": peringkat = "cukup"; break;
+                            case "D": peringkat = "kurang"; break;
+                            case "E": peringkat = "Sangat kurang"; break;
+                            default: peringkat =""; break;
+                        }
+                        let color
+                        for(p.no = 1; p.no <= 2; p.no++){
+                            color = (no % 2 == 0 )? "green" : "red"
+                        } 
+    
+                        document.write(`<tr bgcolor="${color}">
+                            <td>${no++}</td>
+                            <td>${p.nama}</td>
+                            <td>${p.nilai}</td>
+                            <td>${grade}</td>
+                            <td>${peringkat}</td>
+                            <td>${ket}</td>
+                        </tr>`)  
+                        }
+    
+                </script>
+            </tbody>
+        </table>
+    </h3>
