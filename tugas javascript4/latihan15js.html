@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- link boostrapt -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!-- end link -->
+    </head>
+    <body>
+        <form id="kalkulator" class="mt-5">
+            <div class="container">
+                <div class="card-header">
+                    Silakan Isi Form Di Bawah
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div>
+                            <div class="mb-3">
+                                <label class="form-label">Angka 1</label>
+                                <input type="number" class="form-control" name="angka"
+                                    placeholder="masukan angka pertama">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">angka 2</label>
+                                <input type="number" class="form-control" name="angka2"
+                                    placeholder="masukan angka kedua">
+                            </div>
+                            <label class="form-label"> Hasil</label>
+                            <input type="text" name="hasil" class="form-control" value="" disabled> <br>
+
+                            <!-- button -->
+                            <button type="button" class="btn btn-primary" name="btn_tambah"
+                                onclick="tambah()">+</button>
+                            <button type="button" class="btn btn-primary" name="btn_tambah"
+                                onclick="kurang()">-</button>
+                            <button type="button" class="btn btn-primary" name="btn_tambah"
+                                onclick="pembagian()">/</button>
+                            <button type="button" class="btn btn-primary" name="btn_tambah"
+                                onclick="perkalian()">*</button>
+                            <button type="button" class="btn btn-primary" name="btn_tambah"
+                                onclick="pangkat()">pangkat</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>
+
+</html>
+<!-- ini untuk mengarah ke folder js -->
+<script src="js/kalkulator.js"></script>
+<!-- end script -->
+
+<!-- ini link boostrapt -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+</script>
+<!-- end script -->

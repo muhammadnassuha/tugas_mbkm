@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulir</title>
+</head>
+<body>
+	<h1>Formulir</h1>
+	<form id="formulir">
+		<label for="nama">Nama:</label><br>
+		<input type="text" id="nama" name="nama"><br>
+
+		<label for="email">Email:</label><br>
+		<input type="email" id="email" name="email"><br>
+
+		<label for="alamat">Alamat:</label><br>
+		<textarea id="alamat" name="alamat"></textarea><br>
+
+		<input type="button" value="Submit" onclick="tampilkanIsiForm()">
+	</form>
+
+	<h2>Isi Formulir</h2>
+	<div id="hasil"></div>
+
+	<script>
+		function tampilkanIsiForm() {
+			var formulir = document.getElementById("formulir");
+			var nama = formulir.elements["nama"].value;
+			var email = formulir.elements["email"].value;
+			var alamat = formulir.elements["alamat"].value;
+            if(nama == '')
+            {
+                alert('data tidak boleh kosong');
+                return false;
+            }
+
+			var isiFormulir = "Nama: " + nama + "<br>" +
+							  "Email: " + email + "<br>" +
+							  "Alamat: " + alamat;
+
+			document.getElementById("hasil").innerHTML = isiFormulir;
+		}
+	</script>
+</body>
+</html>
