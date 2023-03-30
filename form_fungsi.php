@@ -96,6 +96,8 @@ if(isset($_POST['proses'])){
     $prodi = $_POST['prodi'];
     $skill = $_POST['skill'];
     $domisili = $_POST['domisili'];
+
+   $nilai 
 }
 ?>
 NIM : <?= $nim ?><br>
